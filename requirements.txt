@@ -1,0 +1,2 @@
+# ked davam nieco nove install, je dobry zvyk to tu pridat
+django==4.0.3

@@ -1,0 +1,9 @@
+<h1>HRA</h1>
+
+<form method="POST">
+    <input type="submit"> <br>
+    {% csrf_token %}
+    {{ code_form }}
+</form>
+
+<p> ODPOVED: {{ odpoved }}</p>
