@@ -1,0 +1,1 @@
+# detektivka-django
