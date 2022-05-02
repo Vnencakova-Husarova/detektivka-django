@@ -2,4 +2,4 @@ from django import forms
 
 
 class CodeForm(forms.Form):
-    code = forms.CharField(widget=forms.Textarea)
+    dotaz = forms.CharField(widget=forms.Textarea)
