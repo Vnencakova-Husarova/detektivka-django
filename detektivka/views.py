@@ -1,16 +1,16 @@
 from django.http import HttpResponse
 from django.template import loader
 
-from . import forms
+from detektivka import forms
 
 
 def index_page(request):
-    template = loader.get_template('index.html')
+    template = loader.get_template('detektivka/index.html')
     return HttpResponse(template.render({}, request))
 
 
 def game_page(request):
-    template = loader.get_template('game.html')
+    template = loader.get_template('detektivka/game.html')
     questions = [
         "1. Je streda 10.3.2021, sedíš v počítačovej učebni 568-B a ucitel vam prave zadal zadanie. Zaujme ta "
         "zabudnute usb polozene na stole vedla, ktore tam lezalo uz ked si prisiel. Komu asi patri? ",
