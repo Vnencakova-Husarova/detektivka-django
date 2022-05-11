@@ -1,11 +1,53 @@
-{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Detektívka na MATFYZE</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'detektivka/index_page.css' %}">
+    </head>
+    <body>
+        <div class="title">
+            <h1>DETEKTÍVKA NA MATFYZE:</h1>
+            <p>Niekto na MATFYZ-e odinštaloval zo všetkých počítačov LINUX. Jediné, čo po páchateľovi ostalo, boli Windows-y.
+                Pokúsiš sa nájsť vinníka?</p>
+        </div>
+        <div class="rules">
+            <p>
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+                PravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidlaPravidla
+            </p>
+        </div>
+        <button class="start-button"><a href="game/">ZAČAŤ PÁTRANIE</a></button>
+        <hr>
+        <div>
+            <h3>Opis ročníkového projektu:</h3>
+            <p>Naším cieľom je vytvoriť hru v podobe detektívky, pri ktorej by sa hráč naučil používať datalóg.
+                Hráčovi na začiatku hry poskytneme krátky príbeh, ktorý poslúži ako úvod do deja spolu s pravidlami,
+                podľa ktorých má písať dotazy. Neskôr sa hráčovi budú zobrazovať "nápovedy", ktoré môže ale nemusí využiť.
+                Nápovedami budeme hráča nabádať k zisteniu vinníka. Hráč bude môcť vrámci jednej nápovedy napísať toľko
+                dotazov, koľko bude chcieť a keď už zistí všetko, čo potreboval, posunie sa na ďalšiu nápovedu pomocou
+                tlačidla "chcem ďalšiu nápovedu". Hra má podobu web-stránky, na ktorej implementáciu používame
+                Django a Python.</p>
+        </div>
+         <div class="opis">
+            <p>vytvorili: Tatiana Husárová, Patrícia Vnenčáková
+                <br>
+                pod vedením: doc. RNDr. Ján Mazák, PhD.
+            </p>
+        </div>
+    </body>
+</html>
 
-<link rel="stylesheet" type="text/css" href="{% static 'detektivka/index.css' %}">
-
-<title>Detektivka na matfyze</title>
-<h1>DETEKTÍVKA NA MATFYZE:</h1>
-<body>Niekto na MATFYZ-e odinštaloval zo všetkých počítačov LINUX. Jediné, čo po páchateľovi ostalo, boli Windows-y.
-</body>
-<br>
-
-<button><a href="game/">ZACNI</a></button>

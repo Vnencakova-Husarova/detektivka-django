@@ -1,0 +1,62 @@
+.title {
+    background-color: #96622d;
+    top: 0;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-family: monospace;
+    position: sticky;
+}
+
+.title h1, .title p {
+    color: black;
+    font-size: 30pt;
+}
+
+.title p {
+    font-size: 15pt;
+}
+
+
+.title h1:hover, .title p:hover {
+    color: #96622d;
+    background-color: black;
+}
+
+.rules {
+    font-family: monospace;
+    text-align: -moz-center;
+}
+
+.rules p {
+    font-size: 10pt;
+}
+
+.start-button {
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #96622d;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 2em auto;
+    padding: 15px 32px;
+}
+
+.start-button:hover {
+    background-color: #96622d;
+    color: white;
+}
+
+a:link, a:visited, a:active, a:hover {
+    color: black;
+}
+
+.opis{
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+}

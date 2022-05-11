@@ -1,18 +1,24 @@
-<h1>HRA</h1>
-<p>ZADANIE: {{ question }} </p>
-
-<form method="POST">
-    <input type="submit" value="POŠLI DOTAZ NA OTESTOVANIE"> <br>
-    <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
-    {% csrf_token %}
-    {{ code_form }}
-</form>
-
-<p> ODPOVED: {{ response }}</p> <br>
-
-<form method="POST">
-    <input type="submit" value="DAJ MI ĎALŠIE ZADANIE">
-    <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
-    {% csrf_token %}
-</form>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Detekíivka na MATFYZE</title>
+    </head>
+    <body>
+        <h1>HRA</h1>
+        <p>NÁPOVEDA: {{ question }} </p>
+        <form method="POST">
+            <input type="submit" value="POŠLI DOTAZ NA OTESTOVANIE"> <br>
+            <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
+            {% csrf_token %}
+            {{ code_form }}
+        </form>
+        <p> ODPOVED: {{ response }}</p> <br>
+        <form method="POST">
+            <input type="submit" value="CHCEM ĎALŠIU NÁPOVEDU">
+            <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
+            {% csrf_token %}
+        </form>
+    </body>
+</html>
 
