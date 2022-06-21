@@ -1,10 +1,15 @@
+body {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .title {
     background-color: #96622d;
     top: 0;
     padding: 10px 10px 10px 10px;
     text-align: center;
     font-family: monospace;
-    position: sticky;
+    /*position: sticky;*/
 }
 
 .title h1, .title p {
@@ -32,7 +37,7 @@
 }
 
 .start-button {
-    transition-duration: 0.4s;
+    transition-duration: 0.7s;
     background-color: white;
     color: black;
     border: 2px solid #96622d;
@@ -46,6 +51,10 @@
     padding: 15px 32px;
 }
 
+.start-button a {
+    text-decoration: none;
+}
+
 .start-button:hover {
     background-color: #96622d;
     color: white;
@@ -55,8 +64,6 @@ a:link, a:visited, a:active, a:hover {
     color: black;
 }
 
-.opis{
-    position: fixed;
-    bottom: 0;
-    right: 10px;
+.opis p{
+   text-align: right;
 }
