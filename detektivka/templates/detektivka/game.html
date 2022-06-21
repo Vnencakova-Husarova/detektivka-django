@@ -2,23 +2,46 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Detekíivka na MATFYZE</title>
+        <title>Detektívka na MATFYZE</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'detektivka/game_page.css' %}">
     </head>
     <body>
-        <h1>HRA</h1>
-        <p>NÁPOVEDA: {{ question }} </p>
-        <form method="POST">
-            <input type="submit" value="POŠLI DOTAZ NA OTESTOVANIE"> <br>
-            <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
-            {% csrf_token %}
-            {{ code_form }}
-        </form>
-        <p> ODPOVED: {{ response }}</p> <br>
-        <form method="POST">
-            <input type="submit" value="CHCEM ĎALŠIU NÁPOVEDU">
-            <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
-            {% csrf_token %}
-        </form>
+        <div class="title">
+            <h1>DETEKTÍVKA NA MATFYZE:</h1>
+            <p>Niekto na MATFYZ-e odinštaloval zo všetkých počítačov LINUX. Jediné, čo po páchateľovi ostalo, boli Windows-y.
+                Pokúsiš sa nájsť vinníka?</p>
+        </div>
+
+        <div class="help">
+            <h2>NÁPOVEDA:</h2>
+            <p>{{ question }}</p>
+        </div>
+
+        <div class="split right">
+             <div class="centered">
+                 <form method="POST">
+                     <input type="submit" value="POŠLI DOTAZ NA OTESTOVANIE"> <br>
+                    <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
+                    {% csrf_token %}
+                    {{ code_form }}
+                </form>
+                <p> ODPOVED: {{ response }}</p> <br>
+                <form method="POST">
+                    <input type="submit" value="CHCEM ĎALŠIU NÁPOVEDU">
+                    <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
+                    {% csrf_token %}
+                </form>
+                 <a href="historia.txt">historia</a>
+             </div>
+        </div>
+
+    <div class="split left">
+        <div class="centered">
+             <h2>Povodne predikaty</h2>
+        </div>
+    </div>
+
     </body>
 </html>
 

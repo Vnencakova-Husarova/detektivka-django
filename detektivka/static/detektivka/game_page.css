@@ -1,0 +1,73 @@
+body {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.title {
+    background-color: #96622d;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-family: monospace;
+}
+
+.title h1, .title p {
+    color: black;
+    font-size: 30pt;
+}
+
+.title p {
+    font-size: 15pt;
+}
+
+
+.title h1:hover, .title p:hover {
+    color: #96622d;
+    background-color: black;
+}
+
+.help {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: monospace;
+}
+
+.help h2 {
+    color: #96622d;
+}
+
+.help p {
+    font-size: large;
+}
+
+ /* Split the screen in half */
+.split {
+  height: 70%;
+  width: 31%;
+  position: absolute;
+  z-index: 1;
+  top: auto;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 19%;
+  background-color: #96622d;
+}
+
+/* Control the right side */
+.right {
+  right: 19%;
+  background-color: rosybrown;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
