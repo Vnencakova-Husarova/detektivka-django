@@ -29,11 +29,25 @@ body {
 
 .rules {
     font-family: monospace;
-    text-align: -moz-center;
+    text-align: left;
+    margin: 40px;
 }
 
-.rules p {
-    font-size: 10pt;
+.rules h2 {
+    text-align: center;
+}
+
+.rules p{
+    font-size: 15pt;
+}
+
+.rules li{
+    font-size: 12pt;
+}
+
+.rules h3 {
+    text-align: center;
+    color: #96622d;
 }
 
 .start-button {
