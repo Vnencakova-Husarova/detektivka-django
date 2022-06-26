@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,11 +24,11 @@
              <div class="text-window">
                  <form method="POST">
                      <input type="submit" value="POŠLI DOTAZ NA OTESTOVANIE"> <br>
-                    <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
-                    {% csrf_token %}
-                    {{ code_form }}
+                     <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
+                     {% csrf_token %}
+                     {{ code_form }}
                 </form>
-                <p> ODPOVED: {{ response }}</p> <br>
+                <p> ODPOVEĎ: {{ response }}</p> <br>
                 <form method="POST">
                     <input type="submit" value="CHCEM ĎALŠIU NÁPOVEDU">
                     <input type="hidden" id="question_id" name="question_id" value= {{ counter }}>
@@ -36,14 +38,59 @@
              <div style="flex: auto">
                  <div class="flex-container-2">
                      <div>
-                         <button>POVODNE PREDIKATY</button>
+                         <button onclick="showPredicates()">UKÁŽ PÔVODNÉ PREDIKÁTY</button>
+                         <div id="povodne-predikaty">
+                             <p>
+                                 Klikni na predikát a automaticky sa objaví v textovom poli.
+                                 Nezabúdaj na <a href="{% static 'detektivka/pravidla.txt' %}" target="_blank" style="color: #96622d;">pravidlá</a> písania predikátov!
+                             </p>
+                             <ul>
+                                 <li><code onclick="appendTextarea('student(id, meno, priezvisko, rocnik, nickname)')">
+                                     student('id', 'meno', 'priezvisko', 'rocnik', 'nickname')</code></li>
+                                 <li><code onclick="appendTextarea('zamestnanec(id, meno, priezvisko)')">
+                                     zamestnanec('id', 'meno', 'priezvisko')</code></li>
+                                 <li><code onclick="appendTextarea('pristupova_karta(id, id_majitela)')">
+                                     pristupova_karta('id', 'id_majitela')</code></li>
+                                 <li><code onclick="appendTextarea('navsteva(id_karty, id_miestnosti, cas_od, cas_do)')">
+                                     navsteva('id_karty', 'id_miestnosti', 'cas_od', 'cas_do')</code></li>
+                                 <li><code onclick="appendTextarea('miestnost(id, nazov)')">
+                                     miestnost('id', 'nazov')</code></li>
+                                 <li><code onclick="appendTextarea('obsah_priecinka(nazov_priecinka, nazov_suboru)')">
+                                     obsah_priecinka('nazov_priecinka', 'nazov_suboru')</code></li>
+                                 <li><code onclick="appendTextarea('absolvoval(id_studenta, predmet)')">
+                                     absolvoval('id_studenta', 'predmet')</code></li>
+                                 <li><code onclick="appendTextarea('vyucuje(id_ucitela, predmet)')">
+                                     vyucuje('id_ucitela', 'predmet')</code></li>
+                                 <li><code onclick="appendTextarea('otvoreny_subor_na_pocitaci(nazov_suboru, id_pocitaca, skompilovany)')">
+                                     otvoreny_subor_na_pocitaci('nazov_suboru', 'id_pocitaca', 'skompilovany')</code></li>
+                                 <li><code onclick="appendTextarea('miestnost_pocitac(id_miestnosti, id_pocitaca)')">
+                                     miestnost_pocitac('id_miestnosti', 'id_pocitaca')</code></li>
+                                 <li><code onclick="appendTextarea('historia_vyhladavania(id_uzivatel,predmet_vyhladavania, cas)')">
+                                     historia_vyhladavania('id_uzivatel', 'predmet_vyhladavania', 'cas')</code></li>
+                             </ul>
+                            <button onclick="hidePredicates()">SKRY PÔVODNÉ PREDIKÁTY</button>
+                         </div>
                      </div>
                      <div>
-                         <button>HISTORIA</button>
+                         <button><a href="{% static 'detektivka/historia.txt' %}" target="_blank">HISTÓRIA</a></button>
                      </div>
                  </div>
              </div>
         </div>
+        <script>
+            function appendTextarea(text) {
+                const textarea = document.getElementById('id_dotaz');
+                textarea.value += text
+            }
+
+            function showPredicates() {
+                document.getElementById("povodne-predikaty").style.display = "block";
+            }
+
+            function hidePredicates() {
+                document.getElementById("povodne-predikaty").style.display = "none";
+            }
+        </script>
     </body>
 </html>
 
