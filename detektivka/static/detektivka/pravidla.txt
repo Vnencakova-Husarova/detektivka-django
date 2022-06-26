@@ -1,0 +1,16 @@
+Pravidlá písania predikátov:
+
+    1. Definícia predikátu sa označuje pomocou :-
+    2. Definícia predikátu sa ukončuje bodkou
+    3. Jednotlivé atribúty označujeme veľkými tlačenými písmenami anglickej abecedy
+    4. V menách predikátov používame malé, veľké písmená anglickej abecedy a znaky ‘-‘, ‘_’
+    5. Mená predikátov musia začínať malým písmenom
+    6. Ako atribúty môžeme využívať aj konštanty, ktoré sú v uvedené v ‘ ’
+    7. Neviazané atribúty označujeme znakom ‘_’
+    8. Podmienky pre jednotlivé atribúty píšeme pomocou znakov >, <, =
+    9. Negáciu označujeme poradím znakov \+
+    10. V negovanom predikáte nesmie byť voľná premenná
+    11. Nepoužívame rekurziu
+    12. Používame len predom definované predikáty
+
+príklad korektnej formy predikátu: predikat(A, B) :- predikat_1(A), predikat_2(B).
